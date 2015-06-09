@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <!-- Master -->
+    <definition name="master.page" template="/public/template/master.jsp">
+        <put-attribute name="header" value="/public/template/header.jsp"/>
+        <put-attribute name="footer" value="/public/template/footer.jsp"/>
+    </definition>
+
+    <!--  Pages -->
+    <definition name="home" extends="master.page">
+        <put-attribute name="body" value="/protected/home/home.jsp"/>
+    </definition>
+    <definition name="userList" extends="master.page">
+        <put-attribute name="body" value="/protected/user/user.jsp"/>
+    </definition>
+    <definition name="course" extends="master.page">
+        <put-attribute name="body" value="/protected/course/course.jsp"/>
+    </definition>
+    <definition name="team" extends="master.page">
+        <put-attribute name="body" value="/protected/team/team.jsp"/>
+    </definition>
+    <definition name="report" extends="master.page">
+        <put-attribute name="body" value="/protected/report/report.jsp"/>
+    </definition>
+    <definition name="changePassword" extends="master.page">
+        <put-attribute name="body" value="/protected/user/changePassword.jsp"/>
+    </definition>
+    <definition name="login" extends="master.page">
+        <put-attribute name="header" value=""/>
+        <put-attribute name="footer" value=""/>
+        <put-attribute name="body" value="/public/login.jsp"/>
+    </definition>
+</tiles-definitions>
